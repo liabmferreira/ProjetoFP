@@ -112,6 +112,34 @@ def pagar_carrinho(carrinho, produtos):
     if not carrinho:
         print("O carrinho está vazio. Não há nada a pagar.")
         return
+
+    categorias=[]
+    for codigo in carrinho:
+        if produtos[codigo]["categoria"] not in categorias:
+            categorias.append(produtos[codigo]["categoria"]
+    categorias.sort()
+
+    total_bruto=0.0
+    total_desc=0.0
+    for cat in categorias:
+        print()
+        print("[" +cat +"]")
+        for codigo in carrinho:
+            p=produto[codigo]
+            if p["categoria"] != cat:
+                continue
+            quantidade=carrinho[codigo]
+            subtotal=p["preco"]*quantidade
+            desc=calcular_desconto(p["preco",quantidade]
+            total_bruto+=subtotal
+            total_desc+=desc
+            print(f"{codigo:<7} {p['nome']:<30} {quantidade:>5} {p['preco']:>8.2f} {subtotal:>8.2f} {desc:>8.2f} {subtotal - desc:>8.2f}")
+   
+    for codigo in carrinho:
+        produtos[codigo]["stock"]-=carrinho[codigo]
+    carrinho.clear()
+    print("Pagamento concluído.")
+    
     
 
 def calcular_desconto(total, quantidade):
