@@ -1,0 +1,126 @@
+codigo	nome	categoria	preco	stock
+1001	Leite Meio-Gordo 1L	Lacticinios	0.89	150
+1002	Leite Magro 1L	Lacticinios	0.89	120
+1003	Leite Gordo 1L	Lacticinios	0.92	85
+1004	Leite sem Lactose 1L	Lacticinios	1.15	60
+1005	Manteiga com Sal 250g	Lacticinios	2.19	90
+1006	Manteiga sem Sal 250g	Lacticinios	2.25	45
+1007	Queijo Flamengo Fatiado 200g	Lacticinios	1.99	110
+1008	Queijo Curado Amanteigado	Lacticinios	5.49	30
+1009	Queijo Fresco Natural 2un	Lacticinios	1.45	75
+1010	Iogurte Natural 4un	Lacticinios	1.39	100
+1011	Iogurte Grego Natural 4un	Lacticinios	1.89	80
+1012	Iogurte Morango 4un	Lacticinios	1.49	95
+1013	Natas para Culinaria 200ml	Lacticinios	0.95	130
+1014	Natas para Bater 200ml	Lacticinios	1.10	65
+1015	Pao de Forma Branco	Padaria	1.29	70
+1016	Pao de Forma Integral	Padaria	1.49	65
+1017	Carcaças 6un	Padaria	1.15	50
+1018	Pao de Agua 4un	Padaria	1.20	40
+1019	Croissants 4un	Padaria	2.10	35
+1020	Broa de Milho 500g	Padaria	1.85	25
+1021	Tostas de Trigo 250g	Padaria	1.35	80
+1022	Maca Gala kg	Frutas e Legumes	1.79	140
+1023	Maca Granny Smith kg	Frutas e Legumes	1.99	95
+1024	Banana da Madeira kg	Frutas e Legumes	1.49	160
+1025	Laranja do Algarve kg	Frutas e Legumes	1.29	180
+1026	Pera Rocha kg	Frutas e Legumes	1.89	110
+1027	Uva Branca sem Grainha 500g	Frutas e Legumes	2.49	55
+1028	Morango Caixa 250g	Frutas e Legumes	2.29	40
+1029	Kiwi Verde kg	Frutas e Legumes	2.99	70
+1030	Limao kg	Frutas e Legumes	1.59	90
+1031	Batata Vermelha Saco 3kg	Frutas e Legumes	3.29	100
+1032	Batata Branca Lavada kg	Frutas e Legumes	1.19	130
+1033	Cebola Saco 1kg	Frutas e Legumes	1.09	150
+1034	Alho Seco 250g	Frutas e Legumes	1.45	85
+1035	Cenoura Saco 1kg	Frutas e Legumes	0.99	145
+1036	Tomate Chucha kg	Frutas e Legumes	1.89	95
+1037	Tomate Cherry 250g	Frutas e Legumes	1.69	60
+1038	Alface Frisada un	Frutas e Legumes	0.89	75
+1039	Courgette Verde kg	Frutas e Legumes	1.49	80
+1040	Brocolos kg	Frutas e Legumes	2.19	65
+1041	Peito de Frango kg	Talho	6.49	50
+1042	Coxas de Frango kg	Talho	3.29	60
+1043	Frango Inteiro kg	Talho	2.99	45
+1044	Bifes de Peru kg	Talho	7.29	40
+1045	Carne Picada Mista kg	Talho	5.99	55
+1046	Fevras de Porco kg	Talho	4.79	65
+1047	Costeletas de Porco kg	Talho	4.49	50
+1048	Bifes de Novilho kg	Talho	11.99	30
+1049	Hamburgueres de Novilho 4un	Talho	4.29	45
+1050	Salmao Posta kg	Peixaria	13.99	25
+1051	Dourada Fresca kg	Peixaria	7.49	35
+1052	Robalo Fresco kg	Peixaria	8.49	30
+1053	Pescada em Postas 800g	Peixaria	5.99	40
+1054	Bacalhau Salgado Seco kg	Peixaria	12.49	50
+1055	Miolo de Camarao 400g	Peixaria	4.99	60
+1056	Arroz Carolino 1kg	Mercearia	1.29	200
+1057	Arroz Agulha 1kg	Mercearia	1.19	220
+1058	Arroz Basmati 1kg	Mercearia	1.99	110
+1059	Massa Esparguete 500g	Mercearia	0.85	250
+1060	Massa Macarrao 500g	Mercearia	0.85	210
+1061	Massa Fusilli 500g	Mercearia	0.89	190
+1062	Azeite Virgem Extra 750ml	Mercearia	7.99	120
+1063	Oleo Alimentar 1L	Mercearia	1.69	160
+1064	Vinagre de Vinho Branco 500ml	Mercearia	0.75	90
+1065	Sal Marinho Fino 1kg	Mercearia	0.49	180
+1066	Acucar Branco 1kg	Mercearia	1.15	170
+1067	Farinha de Trigo T55 1kg	Mercearia	0.89	140
+1068	Feijao Preto Cozido 400g	Mercearia	0.79	130
+1069	Feijao Encarnado Cozido 400g	Mercearia	0.79	125
+1070	Grao de Bico Cozido 400g	Mercearia	0.79	135
+1071	Atum em Oleo Vegetal 120g	Mercearia	1.19	240
+1072	Atum ao Natural 120g	Mercearia	1.25	180
+1073	Sardinhas em Tomate 125g	Mercearia	1.09	110
+1074	Tomate Pelado Lata 400g	Mercearia	0.75	160
+1075	Polpa de Tomate 500g	Mercearia	0.85	175
+1076	Cafe Moido Torra Natural 250g	Mercearia	2.79	95
+1077	Capsulas de Cafe 10un	Mercearia	3.49	115
+1078	Cereais Flocos de Milho 375g	Mercearia	1.89	85
+1079	Aveia em Flocos 500g	Mercearia	1.19	100
+1080	Bolachas Maria 200g	Mercearia	0.79	150
+1081	Bolachas Agua e Sal 200g	Mercearia	0.89	120
+1082	Chocolate de Leite Tablete 100g	Mercearia	1.15	140
+1083	Chocolate Preto 70% 100g	Mercearia	1.49	90
+1084	Compota de Morango 250g	Mercearia	1.69	70
+1085	Mel Multifloral 250g	Mercearia	2.99	60
+1086	Ovos Classe L 12un	Mercearia	2.49	110
+1087	Agua Mineral sem Gas 1.5L	Bebidas	0.39	300
+1088	Agua Mineral sem Gas 6x1.5L	Bebidas	2.19	150
+1089	Agua com Gas 1L	Bebidas	0.65	120
+1090	Sumo de Laranja 100% 1L	Bebidas	1.59	95
+1091	Nectar de Pessego 1L	Bebidas	1.09	110
+1092	Refrigerante Cola 1.5L	Bebidas	1.69	140
+1093	Cha Gelado Limao 1.5L	Bebidas	1.39	130
+1094	Cerveja Loura Pack 6x33cl	Bebidas	4.29	100
+1095	Cerveja sem Alcool 6x33cl	Bebidas	3.99	65
+1096	Vinho Tinto Douro 75cl	Bebidas	4.49	80
+1097	Vinho Branco Alentejo 75cl	Bebidas	3.99	75
+1098	Vinho Verde Branco 75cl	Bebidas	3.49	85
+1099	Batatas Fritas Lisas 150g	Snacks	1.29	110
+1100	Amendoins Torrados com Sal 200g	Snacks	1.19	95
+1101	Nozes Miolo 150g	Snacks	2.79	60
+1102	Gel de Banho Hidratante 750ml	Higiene	2.49	85
+1103	Champo Uso Frequente 400ml	Higiene	2.99	90
+1104	Pasta de Dentes Menta 75ml	Higiene	1.79	130
+1105	Escova de Dentes Media	Higiene	1.49	100
+1106	Sabonete Liquido Maos 500ml	Higiene	1.59	95
+1107	Desodorizante Roll-on 50ml	Higiene	2.19	80
+1108	Papel Higienico 12 Rolos	Higiene	3.99	140
+1109	Guardanapos de Papel 100un	Higiene	0.99	160
+1110	Detergente Roupa Liquido 3L	Limpeza	7.99	65
+1111	Amaciador Roupa Concentrado 1.5L	Limpeza	3.29	75
+1112	Detergente Manual Loica 750ml	Limpeza	1.49	120
+1113	Pastilhas Maquina Loica 30un	Limpeza	6.49	70
+1114	Lixivia Tradicional 2L	Limpeza	1.19	110
+1115	Limpa Vidros Pulverizador 750ml	Limpeza	1.69	85
+1116	Sacos do Lixo 30L 20un	Limpeza	1.29	130
+1117	Esponjas de Cozinha 3un	Limpeza	0.89	150
+1118	Ervilhas Ultracongeladas 1kg	Congelados	1.99	90
+1119	Batatas Pre-Fritas 1kg	Congelados	2.19	110
+1120	Pizza Marguerita Congelada	Congelados	2.89	75
+1121	Douradinhos de Peixe 15un	Congelados	3.79	80
+1122	Gelado Baunilha 1L	Congelados	2.99	60
+1123	Racao Seca Cao Adulto 3kg	Animais	6.99	45
+1124	Racao Seca Gato Esterilizado 1.5kg	Animais	4.99	50
+1125	Areia Aglomerante para Gato 5kg	Animais	3.49	60
