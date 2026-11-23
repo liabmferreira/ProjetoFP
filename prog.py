@@ -120,6 +120,52 @@ def calcular_desconto(total, quantidade):
         return desconto, total - desconto
     return 0.0, total
 
+def listar_produtos(produtos):
+    print("1 - Ver Todos" )
+    print("2 - Filtrar por categoria")
+    print("3 - Procurar por nome ")
+    print("4 - Por preço máximo")
+    print("5 - Ver um produto pelo código")
+    op=input("Opção: ").strip()
+
+    lista=[]
+    if op=="1":
+        for codigo in produtos:
+            lista.append(codigo)
+    elif op=="2":
+        categorias=[]
+        for codigo in produtos:
+            if produtos[codigo]["categoria"] not in categorias:
+                categorias.append(produtos[codigo]["categoria"])
+        print("Categorias: ", ", ".join(categorias))
+        cat=input("Categorua: ").strip().lower()
+        for codigo in produtos:
+            if produtos[codigo]["categoria"].lower()==cat:
+                lista.append(codigo)
+    elif op=="3":
+        texto=input("Texto a procurar: ").strip().lower()
+        for codigo in produtos:
+            if texto in produtos[codigo]["nome"].lower():
+                lista.append(codigo)
+    elif op=="4":
+        try:
+            maximo=float(input("Perço máximo: ").replace(",","."))
+        except ValueError:
+            print("Preço inválido.")
+            return 
+        for codigo in products:
+            if produto[codigo]["preco"] <=maximo:
+                lista.append(codigo)
+    elif op=="5":
+        codigo=input("Código: ").strip()
+        consultar_produtos(produtos, codigo)
+        return 
+    else:
+        print("Opção inválida")
+        return 
+        
+    mostar_lista(lista,produtos)
+
 
 def main():
     ...
