@@ -35,7 +35,20 @@ def ler_produtos(nome_ficheiro):
 
     f.close()
     return produtos 
+
+def guardar_produtos(nome_ficheiro, produtos):
+    try:
+        f=open(nome_ficheiro, "w", encoding="utf-8")
+    except OSError:
+        print("Erro: não foi possivel abrir ficheiro", nome_ficheiro)
+        return False
+    f.write("codigo\tnome\tcategoria\tpreco\tstock\n")
+    for codigo in produtos:
+        p=produtos[codigo]
+        f.write(codigo + "\t"+ p["nome"]+ "\t" + p["categoria"]+ "\t" + format(p["preco"], ".2f") + "\t" + str(p["stock"]) + "\n")
     
+    f.close()
+    return True 
 
 def main():
     ...
