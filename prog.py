@@ -61,6 +61,45 @@ def consultar_produto(produtos, codigo):
     else:
         print("Produto não encontrado.")
 
+def adicionar_produto_carrinho(carrinho, produtos, codigo, quantidade):
+    if codigo not in produtos:
+        print("Produto não encontrado.")
+        return False
+    p=produtos[codigo]
+    if quantidade > p["stock"]:
+        print("Quantidade solicitada excede o stock disponível.")
+        return False
+    if codigo in carrinho:
+        carrinho[codigo] += quantidade
+    else:
+        carrinho[codigo] = quantidade
+    p["stock"] -= quantidade
+    print(f"{quantidade} unidade(s) do produto {p['nome']} adicionada(s) ao carrinho.")
+    return True
+
+def consultar_carrinho(carrinho, produtos):
+    if not carrinho:
+        print("O carrinho está vazio.")
+        return
+    total=0.0
+    print("Carrinho de Compras:")
+    for codigo in carrinho:
+        quantidade=carrinho[codigo]
+        p=produtos[codigo]
+        subtotal=quantidade * p["preco"]
+        total += subtotal
+        print(f"Código: {codigo}, Nome: {p['nome']}, Quantidade: {quantidade}, Preço Unitário: {format(p['preco'], '.2f')}, Subtotal: {format(subtotal, '.2f')}")
+    print(f"Total a pagar: {format(total, '.2f')}")
+
+def desconto(carrinho, produtos):
+    if codigo in carrinho:
+        quantidade = carrinho[codigo]
+        if quantidade >= 5:
+            p = produtos[codigo]
+            desconto = p["preco"] * 0.10
+            preco_com_desconto = p["preco"] - desconto
+            print(f"Desconto aplicado: 10% no produto {p['nome']}. Novo preço: {format(preco_com_desconto, '.2f')}")
+
 
 
 def main():
