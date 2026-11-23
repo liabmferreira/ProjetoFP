@@ -27,9 +27,15 @@ def ler_produtos(nome_ficheiro):
             nome=partes[1].strip()
             categoria=partes[2].strip()
             preco=float(partes[3].replace(",","."))
-            stock=float(partes[4])
+            stock=int(partes[4])
         except ValueError:
             print("Linha ignorada por inválidos: ", linha)
+            continue
+        if codigo == "" or preco < 0 or stock < 0:
+            print("Linha ignorada (código vazio ou valores negativos):", linha)
+            continue
+        if codigo in produtos:
+            print("Linha ignorada (código repetido):", linha)
             continue
         produtos[codigo]={"nome": nome, "categoria": categoria, "preco":preco, "stock":stock}
 
@@ -68,6 +74,12 @@ def adicionar_produto_carrinho(carrinho, produtos, codigo, quantidade):
     p=produtos[codigo]
     if quantidade > p["stock"]:
         print("Quantidade solicitada excede o stock disponível.")
+        return False
+    if quantidade <= 0:
+        print("Quantidade inválida.")
+        return False
+    if stock <= 0:
+        print("Produto fora de stock.")
         return False
     if codigo in carrinho:
         carrinho[codigo] += quantidade
