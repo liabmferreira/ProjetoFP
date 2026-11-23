@@ -76,20 +76,20 @@ def adicionar_produto_carrinho(carrinho, produtos, codigo, quantidade):
         print("Produto não encontrado.")
         return False
     p=produtos[codigo]
-    if quantidade > p["stock"]:
+    quantidade_no_carrinho = carrinho.get(codigo, 0)
+    if quantidade > p["stock"] - quantidade_no_carrinho:
         print("Quantidade solicitada excede o stock disponível.")
         return False
     if quantidade <= 0:
         print("Quantidade inválida.")
         return False
-    if stock <= 0:
+    if p["stock"] <= quantidade_no_carrinho:
         print("Produto fora de stock.")
         return False
     if codigo in carrinho:
         carrinho[codigo] += quantidade
     else:
         carrinho[codigo] = quantidade
-    p["stock"] -= quantidade
     print(f"{quantidade} unidade(s) do produto {p['nome']} adicionada(s) ao carrinho.")
     return True
 
@@ -99,13 +99,20 @@ def consultar_carrinho(carrinho, produtos):
         return
     total=0.0
     print("Carrinho de Compras:")
-    for codigo in carrinho:
-        quantidade=carrinho[codigo]
+    for codigo, quantidade in carrinho.items():
         p=produtos[codigo]
-        subtotal=quantidade * p["preco"]
-        total += subtotal
-        print(f"Código: {codigo}, Nome: {p['nome']}, Quantidade: {quantidade}, Preço Unitário: {format(p['preco'], '.2f')}, Subtotal: {format(subtotal, '.2f')}")
+        preco_bruto= p["preco"] * quantidade
+        desconto, final=calcular_desconto(preco_bruto, quantidade)
+        total += final
+        print(f"Código: {codigo}, Nome: {p['nome']}, Quantidade: {quantidade}, Preço Unitário: {format(p['preco'], '.2f')}, Desconto: {format(desconto, '.2f')}, Preço Final: {format(final, '.2f')}")
     print(f"Total a pagar: {format(total, '.2f')}")
+    return total
+
+def pagar_carrinho(carrinho, produtos):
+    if not carrinho:
+        print("O carrinho está vazio. Não há nada a pagar.")
+        return
+    
 
 def calcular_desconto(total, quantidade):
     if quantidade >= limite_desconto:
@@ -120,4 +127,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
