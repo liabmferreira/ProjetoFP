@@ -5,6 +5,10 @@
 
 import sys
 
+#variaveis globais
+limite_desconto= 5
+taxa_desconto=0.10
+
 def ler_produtos(nome_ficheiro):
     produtos={}
     try:
@@ -103,15 +107,11 @@ def consultar_carrinho(carrinho, produtos):
         print(f"Código: {codigo}, Nome: {p['nome']}, Quantidade: {quantidade}, Preço Unitário: {format(p['preco'], '.2f')}, Subtotal: {format(subtotal, '.2f')}")
     print(f"Total a pagar: {format(total, '.2f')}")
 
-def desconto(carrinho, produtos):
-    if codigo in carrinho:
-        quantidade = carrinho[codigo]
-        if quantidade >= 5:
-            p = produtos[codigo]
-            desconto = p["preco"] * 0.10
-            preco_com_desconto = p["preco"] - desconto
-            print(f"Desconto aplicado: 10% no produto {p['nome']}. Novo preço: {format(preco_com_desconto, '.2f')}")
-
+def calcular_desconto(total, quantidade):
+    if quantidade >= limite_desconto:
+        desconto = total * taxa_desconto
+        return desconto, total - desconto
+    return 0.0, total
 
 
 def main():
