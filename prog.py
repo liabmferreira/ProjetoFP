@@ -26,7 +26,7 @@ def ler_produtos(nome_ficheiro):
             codigo=partes[0].strip()
             nome=partes[1].strip()
             categoria=partes[2].strip()
-            preco=float(partes[3].replace(",",".")
+            preco=float(partes[3].replace(",","."))
             stock=float(partes[4])
         except ValueError:
             print("Linha ignorada por inválidos: ", linha)
@@ -49,6 +49,19 @@ def guardar_produtos(nome_ficheiro, produtos):
     
     f.close()
     return True 
+
+def consultar_produto(produtos, codigo):
+    if codigo in produtos:
+        p=produtos[codigo]
+        print("Código:", codigo,"\n")
+        print("Nome:", p["nome"],"\n")
+        print("Categoria:", p["categoria"],"\n")
+        print("Preço:", format(p["preco"], ".2f"),"\n")
+        print("Stock:", p["stock"],"\n")
+    else:
+        print("Produto não encontrado.")
+
+
 
 def main():
     ...
