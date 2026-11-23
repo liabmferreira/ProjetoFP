@@ -205,7 +205,18 @@ def mostrar_lista(lista, produtos):
 
 
 def main():
-    ...
+    if len(sys.argv)>1:
+        ficheiro=sys.argv[1]
+    else:
+        ficheiro="produtos.txt"
+
+    produtos=ler_produtos(ficheiro)
+    if produtos is None:
+        return 
+
+    carrinho={}
+
+
 
 
 if __name__ == "__main__":
