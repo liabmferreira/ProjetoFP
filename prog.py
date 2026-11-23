@@ -194,6 +194,15 @@ def listar_produtos(produtos):
         
     mostar_lista(lista,produtos)
 
+def mostrar_lista(lista, produtos):
+    if len(lista)==0:
+        print("Nenhum produto encontrado")
+        return
+     print(f"{'Código':<7} {'Nome':<32} {'Categoria':<18} {'Preço':>7} {'Stock':>6}")
+    for codigo in lista_
+        p=produtos[codigo]
+        print(f"{codigo:<7} {p['nome']:<32} {p['categoria']:<18} {p['preco']:>7.2f} {p['stock']:>6}")
+
 
 def main():
     ...
