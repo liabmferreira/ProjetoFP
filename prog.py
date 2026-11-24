@@ -119,6 +119,9 @@ def pagar_carrinho(carrinho, produtos):
             categorias.append(produtos[codigo]["categoria"]
     categorias.sort()
 
+    print("Fatura")
+    print(f"{'Código':<7} {'Produto':<30} {'Qtd':>5} {'Preço':>8} {'Subtot.':>8} {'Desc.':>8} {'Total':>8}")
+
     total_bruto=0.0
     total_desc=0.0
     for cat in categorias:
@@ -134,6 +137,10 @@ def pagar_carrinho(carrinho, produtos):
             total_bruto+=subtotal
             total_desc+=desc
             print(f"{codigo:<7} {p['nome']:<30} {quantidade:>5} {p['preco']:>8.2f} {subtotal:>8.2f} {desc:>8.2f} {subtotal - desc:>8.2f}")
+
+    print(f"{'Subtotal:':<60}{total_bruto:>18.2f}")
+    print(f"{'Descontos:':<60}{-total_desc:>18.2f}")
+    print(f"{'TOTAL A PAGAR:':<60}{total_bruto - total_desc:>18.2f}")
    
     for codigo in carrinho:
         produtos[codigo]["stock"]-=carrinho[codigo]
@@ -215,6 +222,14 @@ def main():
         return 
 
     carrinho={}
+
+while True:
+    print()
+    print("===Supermercado===")
+    print("1 - Consultar Produtos")
+    print("2 - Adicionar Produtos ao carrinho")
+    print("3 - Consultar Carrinho")
+    print("4 - Pagar")
 
 
 
