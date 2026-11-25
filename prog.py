@@ -229,7 +229,7 @@ while True:
     print("1 - Consultar Produtos")
     print("2 - Adicionar Produtos ao carrinho")
     print("3 - Consultar Carrinho")
-    print("4 - Pagar")
+    print("4 - Pagar e emitir Fatura")
 
 
 
